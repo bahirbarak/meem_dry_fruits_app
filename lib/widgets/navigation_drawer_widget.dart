@@ -11,7 +11,6 @@ class NavigationDrawerWidget extends StatelessWidget {
     return Drawer(
       child: Material(
         color: const Color.fromARGB(255, 219, 197, 96),
-        // color: Colors.white,
         child: ListView(
           padding: padding,
           children: [
@@ -21,11 +20,6 @@ class NavigationDrawerWidget extends StatelessWidget {
               leading: const Icon(Icons.home),
               onTap: () {
                 Navigator.pop(context);
-
-                // Navigator.push(
-                //     context,
-                //     MaterialPageRoute(
-                //         builder: (context) => const Home(title: "Home")));
               },
             ),
             const Padding(padding: EdgeInsets.only(top: 20)),
@@ -34,7 +28,6 @@ class NavigationDrawerWidget extends StatelessWidget {
               leading: const Icon(Icons.info),
               onTap: () {
                 Navigator.pop(context);
-
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const AboutPage()));
               },
