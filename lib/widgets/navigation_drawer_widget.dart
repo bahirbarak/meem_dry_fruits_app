@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meem_dry_fruits/screens/about.dart';
+import 'package:meem_dry_fruits/screens/contact_us.dart';
 import 'package:meem_dry_fruits/screens/home.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -20,6 +21,16 @@ class NavigationDrawerWidget extends StatelessWidget {
               leading: const Icon(Icons.home),
               onTap: () {
                 Navigator.pop(context);
+              },
+            ),
+            const Padding(padding: EdgeInsets.only(top: 20)),
+            ListTile(
+              title: const Text("Contacts"),
+              leading: const Icon(Icons.info),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const ContactUs()));
               },
             ),
             const Padding(padding: EdgeInsets.only(top: 20)),
