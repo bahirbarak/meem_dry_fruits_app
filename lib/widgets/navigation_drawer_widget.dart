@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:meem_dry_fruits/screens/about.dart';
-import 'package:meem_dry_fruits/screens/contact_us.dart';
 import 'package:meem_dry_fruits/screens/home.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
@@ -11,36 +10,38 @@ class NavigationDrawerWidget extends StatelessWidget {
     const padding = EdgeInsets.symmetric(horizontal: 20, vertical: 10);
     return Drawer(
       child: Material(
-        color: Color.fromARGB(255, 219, 197, 96),
+        color: const Color.fromARGB(255, 219, 197, 96),
         // color: Colors.white,
         child: ListView(
           padding: padding,
           children: [
-            const Padding(padding: EdgeInsets.only(top: 30)),
+            const Padding(padding: EdgeInsets.only(top: 40)),
+            ListTile(
+              title: const Text("Home"),
+              leading: const Icon(Icons.home),
+              onTap: () {
+                Navigator.pop(context);
+
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => const Home(title: "Home")));
+              },
+            ),
+            const Padding(padding: EdgeInsets.only(top: 20)),
+            ListTile(
+              title: const Text("About"),
+              leading: const Icon(Icons.info),
+              onTap: () {
+                Navigator.pop(context);
+
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const AboutPage()));
+              },
+            ),
             const SizedBox(
               height: 48,
             ),
-            buildMenuItems(
-              text: 'Home',
-              icon: Icons.home,
-              // onCliked: () => onSelectedItem(context, 0)
-            ),
-            const SizedBox(
-              height: 48,
-            ),
-            buildMenuItems(text: 'Products', icon: Icons.favorite_border),
-            const SizedBox(
-              height: 48,
-            ),
-            buildMenuItems(
-              text: 'Contact',
-              icon: Icons.contact_phone_outlined,
-              // onCliked: onSelectedItem(context, 2)
-            ),
-            const SizedBox(
-              height: 48,
-            ),
-            buildMenuItems(text: 'About', icon: Icons.info_outline_rounded),
             const Divider(
               color: Colors.white70,
               thickness: 2,
@@ -51,18 +52,31 @@ class NavigationDrawerWidget extends StatelessWidget {
     );
   }
 
-  Widget buildMenuItems(
-      {required String text, required IconData icon, VoidCallback? onCliked}) {
-    const color = Colors.white;
-    const hoverColor = Colors.white70;
-    return ListTile(
-      leading: Icon(icon, color: color),
-      title: Text(text, style: const TextStyle(color: color)),
-      hoverColor: hoverColor,
-      onTap: onCliked,
-    );
-  }
-}
+  // Widget buildMenuItems(
+  //     {required String text, required IconData icon, VoidCallback? onCliked}) {
+  //   const color = Colors.white;
+  //   const hoverColor = Colors.white70;
+  //   return ListTile(
+  //     leading: Icon(icon, color: color),
+  //     title: Text(text, style: const TextStyle(color: color)),
+  //     hoverColor: hoverColor,
+  //     onTap: onCliked,
+  //   );
+  // }
+
+//   onSelectedItem(BuildContext context, int i) {
+//     switch (i) {
+//       case 1:
+//         Navigator.push(context,
+//             MaterialPageRoute(builder: (context) => const Home(title: "Home")));
+//         break;
+
+//       case 2:
+//         Navigator.push(context,
+//             MaterialPageRoute(builder: (context) => const AboutPage()));
+//     }
+//   }
+// }
 
 // onSelectedItem(BuildContext context, int index) {
 //   switch (index) {
@@ -80,4 +94,20 @@ class NavigationDrawerWidget extends StatelessWidget {
 //           .push(MaterialPageRoute(builder: (context) => const AboutPage()));
 //       break;
 //   }
-// }
+
+  onItemClick(BuildContext context, int index) {
+    switch (index) {
+      case 0:
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const Home(title: "Home")));
+        Navigator.pop(context);
+        break;
+
+      case 1:
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const AboutPage()));
+        Navigator.pop(context);
+        break;
+    }
+  }
+}

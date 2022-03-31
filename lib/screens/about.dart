@@ -26,34 +26,34 @@ class _AboutPageState extends State<AboutPage> {
                 "About Us",
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 22,
+                    fontSize: 20,
                     color: Color.fromARGB(255, 219, 197, 96)),
               ),
-              Padding(padding: EdgeInsets.only(top: 30)),
+              Padding(padding: EdgeInsets.only(top: 25)),
               Text(
                   "Afghanistan is a mountainous country with most of the world's best natural and organic agriculture.",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                   )),
               Text(
                   "MeeM is a well-diversified exporter and dealer of quality Afghan organic goods such as nuts, dried fruits, and fresh fruits in foreign markets, primarily the United Arab Emirates and India with a solid supply network of products and services that plays a significant role to improve our national economic growth.",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                   )),
               Text(
                   "Kabul, Afghanistan's capital, is where the organization's headquarters are located.",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                   )),
               Text(
                   "Meem, which is run by two young professional entrepreneurs Kaihan Hazem and Habib Ullah sharifi, works in a unique way to ensure that we only bring top-notch items to market.",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                   )),
               Text(
                   "MeeM Food is an artisanal nut and dried fruit brand that offers health-conscious consumers tasty, nutrient-dense, organic food sources that are farmed responsibly.",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                   )),
               Padding(padding: EdgeInsets.only(top: 30)),
               Text(
@@ -63,7 +63,7 @@ class _AboutPageState extends State<AboutPage> {
                     color: Color.fromARGB(255, 219, 197, 96)),
               ),
               Divider(
-                thickness: 1,
+                thickness: 2,
                 indent: 30,
                 endIndent: 30,
                 color: Color.fromARGB(255, 219, 197, 96),
@@ -78,15 +78,20 @@ class _AboutPageState extends State<AboutPage> {
                       fontWeight: FontWeight.bold,
                       color: Color.fromARGB(255, 219, 197, 96))),
               Divider(
-                thickness: 1,
+                thickness: 2,
                 indent: 30,
                 endIndent: 30,
                 color: Color.fromARGB(255, 219, 197, 96),
               ),
-              Text(
-                  "To establish a firm foundation of trust to strengthen the global sales and marketing network"),
+              Padding(
+                padding: EdgeInsets.only(top: 10, left: 20, right: 20),
+                child: Text(
+                    "To establish a firm foundation of trust to strengthen the global sales and marketing network"),
+              ),
               Divider(
-                thickness: 1,
+                thickness: 2,
+                indent: 30,
+                endIndent: 30,
                 color: Color.fromARGB(255, 219, 197, 96),
               ),
               Text(
